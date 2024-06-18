@@ -10,7 +10,12 @@ export class Snack {
     }
 
     drawSnacks() {
-        vendingService.drawSnack()
+        const snacks = AppState.snacks
+        console.log("Drawing the Snacks", AppState.snacks)
+        let innerHTMLString = ''
+        snacks.forEach((snack) => innerHTMLString += snack.vendingMachineHTMLTemplate)
+        let vendingSnacksElem = document.getElementById("vendingSnacks")
+        vendingSnacksElem.innerHTML = innerHTMLString
     }
     buySnack(snackName) {
         vendingService.buySnack(snackName)

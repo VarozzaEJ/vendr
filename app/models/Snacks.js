@@ -13,7 +13,7 @@ export class Snack {
             src="${this.picture}"
             alt="${this.name}" class="img-fluid">
           <p class="fs-4 text-dark ">${this.name}</p>
-          <p class="fs-5 text-danger">$${this.price}</p>
+          <p class="fs-5 text-danger">$${this.price.toFixed(2)}</p>
         </div>
         `
     }

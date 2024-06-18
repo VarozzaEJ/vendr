@@ -15,6 +15,6 @@ export class MoneyController {
     }
 
     drawMoney() {
-        setText('totalInsertedCash', AppState.money)
+        setText('totalInsertedCash', AppState.money.toFixed(2))
     }
 }
